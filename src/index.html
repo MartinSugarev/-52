@@ -8,11 +8,38 @@
       content="Used as a boilerplate for tasks in the 'HTML, CSS and SASS' course in boom.dev"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .message{
+        display: block;
+      }
+    </style>
   </head>
   <body>
+    
     <div class="main">
       <div class="emoji mb-6">💣🤯💥</div>
       <button class="button">Boom?</button>
     </div>
+<script>
+
+
+
+function appendChildToBody(){
+  for(let i = 0; i < 5; i++){
+  let body = document.body;
+  let el = document.createElement("article");
+  el.setAttribute("class", "message");
+  el.innerHTML = `Number: ${i}`
+   body.appendChild(el)
+}
+
+
+};
+document.body.addEventListener("click", appendChildToBody)
+
+
+  
+
+</script>
   </body>
 </html>
